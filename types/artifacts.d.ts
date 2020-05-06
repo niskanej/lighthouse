@@ -478,11 +478,6 @@ declare global {
         mixedContent: Crdp.Audits.MixedContentIssueDetails[];
       }
 
-      export interface InspectorIssue {
-        code: Crdp.Audits.InspectorIssueCode;
-        details: Crdp.Audits.InspectorIssueDetails;
-      }
-
       // Computed artifact types below.
       export type CriticalRequestNode = {
         [id: string]: {
