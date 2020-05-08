@@ -8,18 +8,24 @@
 const MainThreadTasks = require('../../audits/main-thread-tasks.js');
 
 const acceptableTrace = require('../fixtures/traces/progressive-app-m60.json');
+const devtoolsLog = require('../fixtures/traces/progressive-app-m60.devtools.log.json');
 
 /* eslint-env jest */
 
 describe('Main thread tasks audit', () => {
   it('should work', async () => {
-    const artifacts = {traces: {defaultPass: acceptableTrace}};
+    const artifacts = {
+      traces: {defaultPass: acceptableTrace},
+      devtoolsLogs: {defaultPass: devtoolsLog},
+    };
     const result = await MainThreadTasks.audit(artifacts, {computedCache: new Map()});
-    expect(result.details.items).toHaveLength(39);
+    expect(result.details.items).toHaveLength(4);
 
     for (const item of result.details.items) {
-      expect(Number.isFinite(item.startTime)).toBeTruthy();
+      expect(Number.isFinite(item.start)).toBeTruthy();
       expect(Number.isFinite(item.duration)).toBeTruthy();
+      expect(Number.isFinite(item.end)).toBeTruthy();
+      expect(item.duration).toBeGreaterThan(50);
     }
   });
 });

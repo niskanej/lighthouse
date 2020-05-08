@@ -959,6 +959,11 @@ Object {
           "weight": 0,
         },
         Object {
+          "group": "diagnostics",
+          "id": "main-thread-tasks",
+          "weight": 0,
+        },
+        Object {
           "id": "network-requests",
           "weight": 0,
         },
@@ -968,10 +973,6 @@ Object {
         },
         Object {
           "id": "network-server-latency",
-          "weight": 0,
-        },
-        Object {
-          "id": "main-thread-tasks",
           "weight": 0,
         },
         Object {
