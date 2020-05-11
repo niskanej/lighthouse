@@ -842,6 +842,12 @@
   "lighthouse-core/audits/load-fast-enough-for-pwa.js | title": {
     "message": "Page load is fast enough on mobile networks"
   },
+  "lighthouse-core/audits/long-tasks.js | description": {
+    "message": "Lists the toplevel main thread tasks that executed during page load."
+  },
+  "lighthouse-core/audits/long-tasks.js | title": {
+    "message": "Avoids long-running tasks"
+  },
   "lighthouse-core/audits/mainthread-work-breakdown.js | columnCategory": {
     "message": "Category"
   },
@@ -1199,12 +1205,6 @@
   "lighthouse-core/audits/timing-budget.js | title": {
     "message": "Timing budget"
   },
-  "lighthouse-core/audits/user-timings.js | columnDuration": {
-    "message": "Duration"
-  },
-  "lighthouse-core/audits/user-timings.js | columnStartTime": {
-    "message": "Start Time"
-  },
   "lighthouse-core/audits/user-timings.js | columnType": {
     "message": "Type"
   },
@@ -1436,6 +1436,9 @@
   "lighthouse-core/lib/i18n/i18n.js | columnCacheTTL": {
     "message": "Cache TTL"
   },
+  "lighthouse-core/lib/i18n/i18n.js | columnDuration": {
+    "message": "Duration"
+  },
   "lighthouse-core/lib/i18n/i18n.js | columnElement": {
     "message": "Element"
   },
@@ -1462,6 +1465,9 @@
   },
   "lighthouse-core/lib/i18n/i18n.js | columnSource": {
     "message": "Source"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | columnStartTime": {
+    "message": "Start Time"
   },
   "lighthouse-core/lib/i18n/i18n.js | columnTimeSpent": {
     "message": "Time Spent"

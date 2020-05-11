@@ -1273,13 +1273,7 @@
         "type": "table",
         "headings": [
           {
-            "key": "url",
-            "itemType": "url",
-            "granularity": 1,
-            "text": "URL"
-          },
-          {
-            "key": "start",
+            "key": "startTime",
             "itemType": "ms",
             "granularity": 1,
             "text": "Start Time"
@@ -1288,47 +1282,73 @@
             "key": "duration",
             "itemType": "ms",
             "granularity": 1,
-            "text": "Duration"
-          },
-          {
-            "key": "end",
-            "itemType": "ms",
-            "granularity": 1,
             "text": "End Time"
           }
         ],
         "items": [
           {
-            "url": "http://localhost:10200/dobetterweb/dbw_tester.js",
-            "group": "Other",
-            "start": 2854.095,
-            "self": 0.47,
+            "duration": 5.272,
+            "startTime": 598.738
+          },
+          {
+            "duration": 26.926,
+            "startTime": 604.035
+          },
+          {
+            "duration": 6.681,
+            "startTime": 630.994
+          },
+          {
+            "duration": 19.718,
+            "startTime": 637.706
+          },
+          {
+            "duration": 7.812,
+            "startTime": 666.147
+          },
+          {
+            "duration": 10.087,
+            "startTime": 2639.59
+          },
+          {
             "duration": 983.081,
-            "end": 3837.176
+            "startTime": 2854.095
           },
           {
-            "url": "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js",
-            "group": "Other",
-            "start": 4808.602,
-            "self": 0.085,
-            "duration": 127.282,
-            "end": 4935.884
-          },
-          {
-            "url": "Unattributable",
-            "group": "Other",
-            "start": 3839.839,
-            "self": 0.075,
             "duration": 123.752,
-            "end": 3963.591
+            "startTime": 3839.839
           },
           {
-            "url": "http://localhost:10200/zone.js",
-            "group": "Other",
-            "start": 3996.134,
-            "self": 0.471,
+            "duration": 5.338,
+            "startTime": 3980.383
+          },
+          {
+            "duration": 6.574,
+            "startTime": 3986.1
+          },
+          {
             "duration": 96.198,
-            "end": 4092.332
+            "startTime": 3996.134
+          },
+          {
+            "duration": 9.23,
+            "startTime": 4098.379
+          },
+          {
+            "duration": 5.463,
+            "startTime": 4784.783
+          },
+          {
+            "duration": 127.282,
+            "startTime": 4808.602
+          },
+          {
+            "duration": 6.885,
+            "startTime": 8603.411
+          },
+          {
+            "duration": 7.258,
+            "startTime": 10219.292
           }
         ]
       }
@@ -1715,6 +1735,66 @@
               "nodeLabel": "This domain is for use in illustrative examples in documents. You may use this …",
               "snippet": "<p class=\"paragraph\">"
             }
+          }
+        ]
+      }
+    },
+    "long-tasks": {
+      "id": "long-tasks",
+      "title": "Avoids long-running tasks",
+      "description": "Lists the toplevel main thread tasks that executed during page load.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "itemType": "url",
+            "granularity": 1,
+            "text": "URL"
+          },
+          {
+            "key": "start",
+            "itemType": "ms",
+            "granularity": 1,
+            "text": "Start Time"
+          },
+          {
+            "key": "duration",
+            "itemType": "ms",
+            "granularity": 1,
+            "text": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:10200/dobetterweb/dbw_tester.js",
+            "group": "Other",
+            "start": 2854.095,
+            "self": 0.47,
+            "duration": 983.081
+          },
+          {
+            "url": "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js",
+            "group": "Other",
+            "start": 4808.602,
+            "self": 0.085,
+            "duration": 127.282
+          },
+          {
+            "url": "Unattributable",
+            "group": "Other",
+            "start": 3839.839,
+            "self": 0.075,
+            "duration": 123.752
+          },
+          {
+            "url": "http://localhost:10200/zone.js",
+            "group": "Other",
+            "start": 3996.134,
+            "self": 0.471,
+            "duration": 96.198
           }
         ]
       }
@@ -3907,9 +3987,13 @@
           "group": "diagnostics"
         },
         {
-          "id": "main-thread-tasks",
+          "id": "long-tasks",
           "weight": 0,
           "group": "diagnostics"
+        },
+        {
+          "id": "main-thread-tasks",
+          "weight": 0
         },
         {
           "id": "network-requests",
@@ -5052,6 +5136,12 @@
       },
       {
         "startTime": 0,
+        "name": "lh:audit:long-tasks",
+        "duration": 100,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 0,
         "name": "lh:audit:pwa-cross-browser",
         "duration": 100,
         "entryType": "measure"
@@ -5876,6 +5966,7 @@
         "audits[bootup-time].details.headings[0].text",
         "audits[network-rtt].details.headings[0].text",
         "audits[network-server-latency].details.headings[0].text",
+        "audits[long-tasks].details.headings[0].text",
         "audits[uses-long-cache-ttl].details.headings[0].text",
         "audits[total-byte-weight].details.headings[0].text",
         "audits[render-blocking-resources].details.headings[0].label",
@@ -6244,6 +6335,18 @@
       "lighthouse-core/lib/i18n/i18n.js | columnElement": [
         "audits[largest-contentful-paint-element].details.headings[0].text",
         "audits[dom-size].details.headings[1].text"
+      ],
+      "lighthouse-core/audits/long-tasks.js | title": [
+        "audits[long-tasks].title"
+      ],
+      "lighthouse-core/audits/long-tasks.js | description": [
+        "audits[long-tasks].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | columnStartTime": [
+        "audits[long-tasks].details.headings[1].text"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | columnDuration": [
+        "audits[long-tasks].details.headings[2].text"
       ],
       "lighthouse-core/audits/manual/pwa-cross-browser.js | title": [
         "audits[pwa-cross-browser].title"
