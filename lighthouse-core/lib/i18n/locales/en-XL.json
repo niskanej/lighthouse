@@ -843,10 +843,10 @@
     "message": "P̂áĝé l̂óâd́ îś f̂áŝt́ êńôúĝh́ ôń m̂ób̂íl̂é n̂ét̂ẃôŕk̂ś"
   },
   "lighthouse-core/audits/long-tasks.js | description": {
-    "message": "L̂íŝt́ŝ t́ĥé t̂óp̂ĺêv́êĺ m̂áîń t̂h́r̂éâd́ t̂áŝḱŝ t́ĥát̂ éx̂éĉút̂éd̂ d́ûŕîńĝ ṕâǵê ĺôád̂."
+    "message": "L̂íŝt́ŝ t́ĥé l̂ón̂ǵêśt̂ t́âśk̂ś ôń t̂h́ê ḿâín̂ t́ĥŕêád̂, úŝéf̂úl̂ f́ôŕ îd́êńt̂íf̂ýîńĝ ẃôŕŝt́ ĉón̂t́r̂íb̂út̂ór̂ś t̂ó îńp̂út̂ d́êĺâý."
   },
   "lighthouse-core/audits/long-tasks.js | title": {
-    "message": "Âv́ôíd̂ś l̂ón̂ǵ-r̂ún̂ńîńĝ t́âśk̂ś"
+    "message": "L̂ón̂ǵ m̂áîń t̂h́r̂éâd́ t̂áŝḱŝ"
   },
   "lighthouse-core/audits/mainthread-work-breakdown.js | columnCategory": {
     "message": "Ĉát̂éĝór̂ý"

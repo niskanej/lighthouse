@@ -1741,8 +1741,8 @@
     },
     "long-tasks": {
       "id": "long-tasks",
-      "title": "Avoids long-running tasks",
-      "description": "Lists the toplevel main thread tasks that executed during page load.",
+      "title": "Long main thread tasks",
+      "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay.",
       "score": null,
       "scoreDisplayMode": "informative",
       "details": {
@@ -1751,19 +1751,18 @@
           {
             "key": "url",
             "itemType": "url",
-            "granularity": 1,
             "text": "URL"
           },
           {
             "key": "start",
             "itemType": "ms",
-            "granularity": 1,
+            "granularity": 10,
             "text": "Start Time"
           },
           {
             "key": "duration",
             "itemType": "ms",
-            "granularity": 1,
+            "granularity": 10,
             "text": "Duration"
           }
         ],

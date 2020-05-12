@@ -24,7 +24,7 @@ describe('Long tasks audit', () => {
     for (const item of result.details.items) {
       expect(Number.isFinite(item.start)).toBeTruthy();
       expect(Number.isFinite(item.duration)).toBeTruthy();
-      expect(item.duration).toBeGreaterThan(50);
+      expect(item.duration).toBeGreaterThanOrEqual(50);
     }
   });
 });

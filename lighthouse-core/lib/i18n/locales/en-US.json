@@ -843,10 +843,10 @@
     "message": "Page load is fast enough on mobile networks"
   },
   "lighthouse-core/audits/long-tasks.js | description": {
-    "message": "Lists the toplevel main thread tasks that executed during page load."
+    "message": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay."
   },
   "lighthouse-core/audits/long-tasks.js | title": {
-    "message": "Avoids long-running tasks"
+    "message": "Long main thread tasks"
   },
   "lighthouse-core/audits/mainthread-work-breakdown.js | columnCategory": {
     "message": "Category"
