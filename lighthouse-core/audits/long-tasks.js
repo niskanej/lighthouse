@@ -74,10 +74,15 @@ class LongTasks extends Audit {
 
     const tableDetails = Audit.makeTableDetails(headings, results);
 
+    let displayValue;
+    if (results.length > 0) {
+      displayValue = str_(UIStrings.displayValue, {itemCount: results.length});
+    }
+
     return {
       score: 1,
       details: tableDetails,
-      displayValue: str_(UIStrings.displayValue, {itemCount: results.length}),
+      displayValue,
     };
   }
 }
