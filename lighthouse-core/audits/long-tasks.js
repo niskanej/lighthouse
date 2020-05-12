@@ -94,7 +94,7 @@ class LongTasks extends Audit {
 
     const jsURLs = LongTasks.getJavaScriptURLs(networkRecords);
     const longtasks = [...tasks].sort((a, b) => b.duration - a.duration)
-      .filter(t => t.duration >= 50 && t.unbounded === false && !t.parent)
+      .filter(t => t.duration >= 50 && !t.unbounded && !t.parent)
       .slice(0, 20);
 
     const results = longtasks.map(t => ({

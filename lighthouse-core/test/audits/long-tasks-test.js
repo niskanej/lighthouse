@@ -13,7 +13,7 @@ const devtoolsLog = require('../fixtures/traces/progressive-app-m60.devtools.log
 /* eslint-env jest */
 
 describe('Long tasks audit', () => {
-  it('should filter out top level tasks with a duration over 50 ms', async () => {
+  it('should filter out top level tasks shorter than 50 ms', async () => {
     const artifacts = {
       traces: {defaultPass: acceptableTrace},
       devtoolsLogs: {defaultPass: devtoolsLog},
