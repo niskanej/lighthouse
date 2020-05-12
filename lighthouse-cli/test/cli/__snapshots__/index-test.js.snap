@@ -58,7 +58,7 @@ Object {
       "path": "errors-in-console",
     },
     Object {
-      "path": "time-to-first-byte",
+      "path": "server-response-time",
     },
     Object {
       "path": "metrics/first-cpu-idle",
@@ -152,6 +152,9 @@ Object {
     },
     Object {
       "path": "largest-contentful-paint-element",
+    },
+    Object {
+      "path": "layout-shift-elements",
     },
     Object {
       "path": "long-tasks",
@@ -863,7 +866,7 @@ Object {
         },
         Object {
           "group": "load-opportunities",
-          "id": "time-to-first-byte",
+          "id": "server-response-time",
           "weight": 0,
         },
         Object {
@@ -948,6 +951,11 @@ Object {
         },
         Object {
           "group": "diagnostics",
+          "id": "layout-shift-elements",
+          "weight": 0,
+        },
+        Object {
+          "group": "diagnostics",
           "id": "uses-http2",
           "weight": 0,
         },
@@ -967,10 +975,6 @@ Object {
           "weight": 0,
         },
         Object {
-          "id": "main-thread-tasks",
-          "weight": 0,
-        },
-        Object {
           "id": "network-requests",
           "weight": 0,
         },
@@ -980,6 +984,10 @@ Object {
         },
         Object {
           "id": "network-server-latency",
+          "weight": 0,
+        },
+        Object {
+          "id": "main-thread-tasks",
           "weight": 0,
         },
         Object {
@@ -1217,11 +1225,11 @@ Object {
       "title": "Budgets",
     },
     "diagnostics": Object {
-      "description": "More information about the performance of your application. These numbers don't [directly affect](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) the Performance score.",
+      "description": "More information about the performance of your application. These numbers don't [directly affect](https://web.dev/performance-scoring/) the Performance score.",
       "title": "Diagnostics",
     },
     "load-opportunities": Object {
-      "description": "These suggestions can help your page load faster. They don't [directly affect](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) the Performance score.",
+      "description": "These suggestions can help your page load faster. They don't [directly affect](https://web.dev/performance-scoring/) the Performance score.",
       "title": "Opportunities",
     },
     "metrics": Object {
@@ -1495,11 +1503,11 @@ Object {
       "title": "Budgets",
     },
     "diagnostics": Object {
-      "description": "More information about the performance of your application. These numbers don't [directly affect](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) the Performance score.",
+      "description": "More information about the performance of your application. These numbers don't [directly affect](https://web.dev/performance-scoring/) the Performance score.",
       "title": "Diagnostics",
     },
     "load-opportunities": Object {
-      "description": "These suggestions can help your page load faster. They don't [directly affect](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) the Performance score.",
+      "description": "These suggestions can help your page load faster. They don't [directly affect](https://web.dev/performance-scoring/) the Performance score.",
       "title": "Opportunities",
     },
     "metrics": Object {
