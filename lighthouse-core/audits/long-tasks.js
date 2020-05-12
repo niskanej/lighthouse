@@ -21,7 +21,7 @@ const UIStrings = {
   displayValue: `{itemCount, plural,
   =1 {1 long task found}
   other {# long tasks found}
-  }`
+  }`,
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
