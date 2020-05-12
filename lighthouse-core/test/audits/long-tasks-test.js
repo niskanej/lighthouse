@@ -20,6 +20,7 @@ describe('Long tasks audit', () => {
     };
     const result = await LongTasks.audit(artifacts, {computedCache: new Map()});
     expect(result.details.items).toHaveLength(4);
+    expect(result.displayValue).toBeDisplayString('4 long tasks found');
 
     for (const item of result.details.items) {
       expect(Number.isFinite(item.start)).toBeTruthy();

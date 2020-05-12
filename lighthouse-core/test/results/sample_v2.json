@@ -1802,6 +1802,7 @@
       "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay.",
       "score": null,
       "scoreDisplayMode": "informative",
+      "displayValue": "4 long tasks found",
       "details": {
         "type": "table",
         "headings": [
@@ -6423,6 +6424,14 @@
       ],
       "lighthouse-core/audits/long-tasks.js | description": [
         "audits[long-tasks].description"
+      ],
+      "lighthouse-core/audits/long-tasks.js | displayValue": [
+        {
+          "values": {
+            "itemCount": 4
+          },
+          "path": "audits[long-tasks].displayValue"
+        }
       ],
       "lighthouse-core/lib/i18n/i18n.js | columnStartTime": [
         "audits[long-tasks].details.headings[1].text"

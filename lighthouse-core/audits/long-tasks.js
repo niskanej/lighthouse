@@ -17,6 +17,11 @@ const UIStrings = {
   /** Description of a diagnostic LH audit that tells the user to minimize the amount of long-running tasks on a page. */
   description: 'Lists the longest tasks on the main thread, ' +
     'useful for identifying worst contributors to input delay.',
+  /** [ICU Syntax] Label for an audit that tells the user to minimize the amount of long-running tasks on a page. */
+  displayValue: `{itemCount, plural,
+  =1 {1 long task found}
+  other {# long tasks found}
+  }`
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
@@ -72,6 +77,7 @@ class LongTasks extends Audit {
     return {
       score: 1,
       details: tableDetails,
+      displayValue: str_(UIStrings.displayValue, {itemCount: results.length}),
     };
   }
 }
