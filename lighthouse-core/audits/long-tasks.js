@@ -14,9 +14,10 @@ const BootupTime = require('./bootup-time.js');
 const UIStrings = {
   /** Title of a diagnostic LH audit that provides details on the longest running tasks that occur when the page loads. */
   title: 'Long main-thread tasks',
-  /** Description of a diagnostic LH audit that tells the user to minimize the amount of long-running tasks on a page. */
+  /** Description of a diagnostic LH audit that shows the user the longest running tasks that occur when the page loads. */
   description: 'Lists the longest tasks on the main thread, ' +
-    'useful for identifying worst contributors to input delay.',
+    'useful for identifying worst contributors to input delay. ' +
+    '[Learn more](https://web.dev/long-tasks-devtools)',
   /** [ICU Syntax] Label identifying the number of long-running CPU tasks that occurred while loading a web page. */
   displayValue: `{itemCount, plural,
   =1 {1 long task found}
@@ -46,12 +47,16 @@ class LongTasks extends Audit {
    * @return {Promise<LH.Audit.Product>}
    */
   static async audit(artifacts, context) {
+    const settings = context.settings || {};
     const trace = artifacts.traces[Audit.DEFAULT_PASS];
     const tasks = await MainThreadTasks.request(trace, context);
     const devtoolsLog = artifacts.devtoolsLogs[LongTasks.DEFAULT_PASS];
     const networkRecords = await NetworkRecords.request(devtoolsLog, context);
+    const multiplier = settings.throttlingMethod === 'simulate' ?
+      settings.throttling.cpuSlowdownMultiplier : 1;
 
     const jsURLs = BootupTime.getJavaScriptURLs(networkRecords);
+    // Only consider up to 20 long, top-level (no parent) tasks that have an explicit endTime
     const longtasks = [...tasks]
       .filter(t => t.duration >= 50 && !t.unbounded && !t.parent)
       .sort((a, b) => b.duration - a.duration)
@@ -62,14 +67,14 @@ class LongTasks extends Audit {
       group: task.group.label,
       start: task.startTime,
       self: task.selfTime,
-      duration: task.duration,
+      duration: task.duration * multiplier,
     }));
 
     /** @type {LH.Audit.Details.Table['headings']} */
     const headings = [
       {key: 'url', itemType: 'url', text: str_(i18n.UIStrings.columnURL)},
-      {key: 'start', itemType: 'ms', granularity: 10, text: str_(i18n.UIStrings.columnStartTime)},
-      {key: 'duration', itemType: 'ms', granularity: 10, text: str_(i18n.UIStrings.columnDuration)},
+      {key: 'start', itemType: 'ms', granularity: 1, text: str_(i18n.UIStrings.columnStartTime)},
+      {key: 'duration', itemType: 'ms', granularity: 1, text: str_(i18n.UIStrings.columnDuration)},
     ];
 
     const tableDetails = Audit.makeTableDetails(headings, results);
