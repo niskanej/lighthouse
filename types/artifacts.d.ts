@@ -142,6 +142,8 @@ declare global {
       TagsBlockingFirstPaint: Artifacts.TagBlockingFirstPaint[];
       /** Information about tap targets including their position and size. */
       TapTargets: Artifacts.TapTarget[];
+      /** Elements associated with metrics (ie: Largest Contentful Paint element). */
+      TraceElements: Artifacts.TraceElement[];
     }
 
     module Artifacts {
@@ -466,6 +468,14 @@ declare global {
         clientRects: Rect[];
       }
 
+      export interface TraceElement {
+        metricName: string;
+        selector: string;
+        nodeLabel?: string;
+        devtoolsNodePath: string;
+        snippet?: string;
+      }
+
       export interface ViewportDimensions {
         innerWidth: number;
         innerHeight: number;
@@ -559,7 +569,6 @@ declare global {
         traceEnd: number;
         load?: number;
         domContentLoaded?: number;
-        cumulativeLayoutShift?: number;
       }
 
       export interface TraceOfTab {
@@ -633,7 +642,6 @@ declare global {
         observedNavigationStart: number;
         observedNavigationStartTs: number;
         observedCumulativeLayoutShift: number | undefined;
-        observedCumulativeLayoutShiftTs: number | undefined;
         observedFirstPaint: number | undefined;
         observedFirstPaintTs: number | undefined;
         observedFirstContentfulPaint: number;
