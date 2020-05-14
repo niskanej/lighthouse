@@ -13,11 +13,11 @@ const BootupTime = require('./bootup-time.js');
 
 const UIStrings = {
   /** Title of a diagnostic LH audit that provides details on the longest running tasks that occur when the page loads. */
-  title: 'Long main thread tasks',
+  title: 'Long main-thread tasks',
   /** Description of a diagnostic LH audit that tells the user to minimize the amount of long-running tasks on a page. */
   description: 'Lists the longest tasks on the main thread, ' +
     'useful for identifying worst contributors to input delay.',
-  /** [ICU Syntax] Label for an audit that tells the user to minimize the amount of long-running tasks on a page. */
+  /** [ICU Syntax] Label identifying the number of long-running CPU tasks that occurred while loading a web page. */
   displayValue: `{itemCount, plural,
   =1 {1 long task found}
   other {# long tasks found}
