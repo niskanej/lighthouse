@@ -20,7 +20,7 @@ const UIStrings = {
     '[Learn more](https://web.dev/long-tasks-devtools)',
   /** [ICU Syntax] Label identifying the number of long-running CPU tasks that occurred while loading a web page. */
   displayValue: `{itemCount, plural,
-  =1 {1 long task found}
+  =1 {# long task found}
   other {# long tasks found}
   }`,
 };

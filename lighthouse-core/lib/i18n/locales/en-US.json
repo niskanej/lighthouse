@@ -855,7 +855,7 @@
     "message": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn more](https://web.dev/long-tasks-devtools)"
   },
   "lighthouse-core/audits/long-tasks.js | displayValue": {
-    "message": "{itemCount, plural,\n  =1 {1 long task found}\n  other {# long tasks found}\n  }"
+    "message": "{itemCount, plural,\n  =1 {# long task found}\n  other {# long tasks found}\n  }"
   },
   "lighthouse-core/audits/long-tasks.js | title": {
     "message": "Avoid long main-thread tasks"
