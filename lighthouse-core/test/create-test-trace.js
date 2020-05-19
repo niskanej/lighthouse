@@ -9,14 +9,14 @@ const pid = 1111;
 const tid = 222;
 const frame = '3EFC2700D7BC3F4734CAF2F726EFB78C';
 
-/** @typedef {{ts: number, duration: number}} TopLevelTaskDef */
+/** @typedef {{ts: number, duration: number, url: string}} TopLevelTaskDef */
 
 /**
  * @param {TopLevelTaskDef} options
  */
-function getTopLevelTask({ts, duration}) {
+function getTopLevelTask({ts, duration, url}) {
   return {
-    name: 'RunTask',
+    name: 'FunctionCall',
     ts: ts * 1000,
     dur: duration * 1000,
     pid,
@@ -26,6 +26,9 @@ function getTopLevelTask({ts, duration}) {
     args: {
       src_file: '../../third_party/blink/renderer/core/fake_runner.cc',
       src_func: 'FakeRunnerFinished',
+      data: {
+        url,
+      },
     },
   };
 }

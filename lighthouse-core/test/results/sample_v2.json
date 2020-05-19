@@ -1798,7 +1798,7 @@
     },
     "long-tasks": {
       "id": "long-tasks",
-      "title": "Long main-thread tasks",
+      "title": "Avoid long main-thread tasks",
       "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn more](https://web.dev/long-tasks-devtools)",
       "score": null,
       "scoreDisplayMode": "informative",
@@ -1810,12 +1810,6 @@
             "key": "url",
             "itemType": "url",
             "text": "URL"
-          },
-          {
-            "key": "start",
-            "itemType": "ms",
-            "granularity": 1,
-            "text": "Start Time"
           },
           {
             "key": "duration",
@@ -6433,11 +6427,8 @@
           "path": "audits[long-tasks].displayValue"
         }
       ],
-      "lighthouse-core/lib/i18n/i18n.js | columnStartTime": [
-        "audits[long-tasks].details.headings[1].text"
-      ],
       "lighthouse-core/lib/i18n/i18n.js | columnDuration": [
-        "audits[long-tasks].details.headings[2].text"
+        "audits[long-tasks].details.headings[1].text"
       ],
       "lighthouse-core/audits/manual/pwa-cross-browser.js | title": [
         "audits[pwa-cross-browser].title"

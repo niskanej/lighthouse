@@ -858,7 +858,7 @@
     "message": "{itemCount, plural,\n  =1 {1 long task found}\n  other {# long tasks found}\n  }"
   },
   "lighthouse-core/audits/long-tasks.js | title": {
-    "message": "Long main-thread tasks"
+    "message": "Avoid long main-thread tasks"
   },
   "lighthouse-core/audits/mainthread-work-breakdown.js | columnCategory": {
     "message": "Category"

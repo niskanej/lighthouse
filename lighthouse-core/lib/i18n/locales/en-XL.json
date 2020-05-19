@@ -858,7 +858,7 @@
     "message": "{itemCount, plural,\n  =1 {1 l̂ón̂ǵ t̂áŝḱ f̂óûńd̂}\n  other {# ĺôńĝ t́âśk̂ś f̂óûńd̂}\n  }"
   },
   "lighthouse-core/audits/long-tasks.js | title": {
-    "message": "L̂ón̂ǵ m̂áîń-t̂h́r̂éâd́ t̂áŝḱŝ"
+    "message": "Âv́ôíd̂ ĺôńĝ ḿâín̂-t́ĥŕêád̂ t́âśk̂ś"
   },
   "lighthouse-core/audits/mainthread-work-breakdown.js | columnCategory": {
     "message": "Ĉát̂éĝór̂ý"

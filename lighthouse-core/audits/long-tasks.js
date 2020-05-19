@@ -13,7 +13,7 @@ const BootupTime = require('./bootup-time.js');
 
 const UIStrings = {
   /** Title of a diagnostic LH audit that provides details on the longest running tasks that occur when the page loads. */
-  title: 'Long main-thread tasks',
+  title: 'Avoid long main-thread tasks',
   /** Description of a diagnostic LH audit that shows the user the longest running tasks that occur when the page loads. */
   description: 'Lists the longest tasks on the main thread, ' +
     'useful for identifying worst contributors to input delay. ' +
@@ -58,6 +58,7 @@ class LongTasks extends Audit {
     const jsURLs = BootupTime.getJavaScriptURLs(networkRecords);
     // Only consider up to 20 long, top-level (no parent) tasks that have an explicit endTime
     const longtasks = [...tasks]
+      .map(t => ({...t, duration: t.duration * multiplier}))
       .filter(t => t.duration >= 50 && !t.unbounded && !t.parent)
       .sort((a, b) => b.duration - a.duration)
       .slice(0, 20);
@@ -73,7 +74,6 @@ class LongTasks extends Audit {
     /** @type {LH.Audit.Details.Table['headings']} */
     const headings = [
       {key: 'url', itemType: 'url', text: str_(i18n.UIStrings.columnURL)},
-      {key: 'start', itemType: 'ms', granularity: 1, text: str_(i18n.UIStrings.columnStartTime)},
       {key: 'duration', itemType: 'ms', granularity: 1, text: str_(i18n.UIStrings.columnDuration)},
     ];
 
@@ -85,7 +85,8 @@ class LongTasks extends Audit {
     }
 
     return {
-      score: 1,
+      score: Number(results.length === 0),
+      notApplicable: results.length === 0,
       details: tableDetails,
       displayValue,
     };
