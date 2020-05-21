@@ -187,20 +187,14 @@ module.exports = [
         // },
         'long-tasks': {
           score: null,
-          displayValue: '2 long tasks found',
           details: {
-            items: [
-              {
-                url: 'http://localhost:10200/perf/trace-elements.html',
-                group: 'Other',
-                duration: '>50',
-              },
-              {
+            items: {
+              0: {
                 url: 'http://localhost:10200/perf/delayed-element.js',
                 group: 'Other',
-                duration: '>50',
+                duration: '>500',
               },
-            ],
+            },
           },
         },
       },

@@ -17,6 +17,6 @@ setTimeout(() => {
 }, 1000);
 
 const start = performance.now();
-while (performance.now() - start < 100) {
+while (performance.now() - start < 800) {
   for (let i = 0; i < 1000000; i++) ;
 }
