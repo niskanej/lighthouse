@@ -416,8 +416,18 @@ const expectations = [
   {
     artifacts: {
       InspectorIssues: {
-        mixedContent: [],
-      }
+        mixedContent: [
+          {
+            resourceType: 'Image',
+            resolutionStatus: 'MixedContentWarning',
+            insecureURL: 'http://www.mixedcontentexamples.com/Content/Test/steveholt.jpg',
+            mainResourceURL: 'https://www.mixedcontentexamples.com/Test/NonSecureImage',
+            request: {
+              url: 'http://www.mixedcontentexamples.com/Content/Test/steveholt.jpg',
+            },
+          },
+        ],
+      },
     },
     lhr: {
       requestedUrl: 'https://www.mixedcontentexamples.com/Test/NonSecureImage',
