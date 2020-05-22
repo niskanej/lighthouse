@@ -413,6 +413,22 @@ const expectations = [
       },
     },
   },
+  {
+    artifacts: {
+      InspectorIssues: {
+        mixedContent: [],
+      }
+    },
+    lhr: {
+      requestedUrl: 'https://www.mixedcontentexamples.com/Test/NonSecureImage',
+      finalUrl: 'https://www.mixedcontentexamples.com/Test/NonSecureImage',
+      audits: {
+        'is-on-https': {
+          score: 0,
+        },
+      },
+    },
+  },
 ];
 
 module.exports = expectations;
