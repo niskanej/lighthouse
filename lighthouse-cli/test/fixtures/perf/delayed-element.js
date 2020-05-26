@@ -6,6 +6,8 @@
 
 /* eslint-disable */
 
+// largest-contentful-paint-element: add the largest element later in page load
+// layout-shift-elements: shift down the `<h1>` in the page
 setTimeout(() => {
   const imgEl = document.createElement('img');
   imgEl.src = '../dobetterweb/lighthouse-480x318.jpg';
@@ -16,6 +18,7 @@ setTimeout(() => {
   top.appendChild(textEl);
 }, 1000);
 
+// long-tasks: add a very long task at least 500ms
 const start = performance.now();
 while (performance.now() - start < 800) {
   for (let i = 0; i < 1000000; i++) ;

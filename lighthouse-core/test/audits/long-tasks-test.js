@@ -31,7 +31,7 @@ function generateTraceWithLongTasks(
     task.children = [];
     if (withChildTasks) {
       task.children.push({
-        ts: ts + 10,
+        ts: ts + duration / 10,
         duration: duration / 3,
         url: TASK_URL,
       });
@@ -74,7 +74,7 @@ describe('Long tasks audit', () => {
 
     for (const item of result.details.items) {
       expect(Number.isFinite(item.duration)).toBeTruthy();
-      expect(item.duration).toBeGreaterThanOrEqual(50);
+      expect(item.duration).toEqual(200);
       expect(item.url).toEqual('Unattributable');
     }
   });
@@ -125,7 +125,7 @@ describe('Long tasks audit', () => {
 
     for (const item of result.details.items) {
       expect(Number.isFinite(item.duration)).toBeTruthy();
-      expect(item.duration).toBeGreaterThanOrEqual(50);
+      expect(item.duration).toEqual(90);
       expect(item.url).toEqual('Unattributable');
     }
   });
