@@ -1,5 +1,5 @@
 {
-  "totalSignals": 237,
+  "totalSignals": 308,
   "variantsMissingSignals": [
     "core-js-2-only-polyfill/es6-array-filter",
     "core-js-2-only-polyfill/es6-array-map",
@@ -359,59 +359,59 @@
     },
     {
       "name": "core-js-3-only-polyfill/es-array-fill",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.fill"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-filter",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.filter"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-find",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.find"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-find-index",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.findIndex"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-for-each",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.forEach"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-from",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.from"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-includes",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.includes"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-is-array",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.isArray"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-last-index-of",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.lastIndexOf"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-map",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.map"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-of",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.of"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-reduce",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.reduce"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-reduce-right",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.reduceRight"
     },
     {
       "name": "core-js-3-only-polyfill/es-array-some",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Array.prototype.some"
     },
     {
       "name": "core-js-3-only-polyfill/es-data-view",
@@ -419,15 +419,15 @@
     },
     {
       "name": "core-js-3-only-polyfill/es-date-now",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Date.now"
     },
     {
       "name": "core-js-3-only-polyfill/es-date-to-iso-string",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Date.prototype.toISOString"
     },
     {
       "name": "core-js-3-only-polyfill/es-date-to-json",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Date.prototype.toJSON"
     },
     {
       "name": "core-js-3-only-polyfill/es-date-to-string",
@@ -443,91 +443,91 @@
     },
     {
       "name": "core-js-3-only-polyfill/es-number-is-integer",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Number.isInteger"
     },
     {
       "name": "core-js-3-only-polyfill/es-number-is-safe-integer",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Number.isSafeInteger"
     },
     {
       "name": "core-js-3-only-polyfill/es-number-parse-float",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Number.parseFloat"
     },
     {
       "name": "core-js-3-only-polyfill/es-number-parse-int",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Number.parseInt"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-assign",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.assign"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-create",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.create"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-define-properties",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.defineProperties"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-define-property",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.defineProperty"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-entries",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.entries"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-freeze",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.freeze"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-get-own-property-descriptor",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-get-own-property-descriptors",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.getOwnPropertyDescriptors"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-get-own-property-names",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.getOwnPropertyNames"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-get-prototype-of",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.getPrototypeOf"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-is-extensible",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.isExtensible"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-is-frozen",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.isFrozen"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-is-sealed",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.isSealed"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-keys",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.keys"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-prevent-extensions",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.preventExtensions"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-seal",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.seal"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-set-prototype-of",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.setPrototypeOf"
     },
     {
       "name": "core-js-3-only-polyfill/es-object-values",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Object.values"
     },
     {
       "name": "core-js-3-only-polyfill/es-promise",
@@ -535,55 +535,55 @@
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-apply",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.apply"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-construct",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.construct"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-define-property",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.defineProperty"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-delete-property",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.deleteProperty"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-get",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.get"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-get-own-property-descriptor",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-get-prototype-of",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.getPrototypeOf"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-has",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.has"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-is-extensible",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.isExtensible"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-own-keys",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.ownKeys"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-prevent-extensions",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.preventExtensions"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-set",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.set"
     },
     {
       "name": "core-js-3-only-polyfill/es-reflect-set-prototype-of",
-      "signals": "WeakMap"
+      "signals": "WeakMap, Reflect.setPrototypeOf"
     },
     {
       "name": "core-js-3-only-polyfill/es-set",
@@ -591,79 +591,79 @@
     },
     {
       "name": "core-js-3-only-polyfill/es-string-code-point-at",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.codePointAt"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-ends-with",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.endsWith"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-from-code-point",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.fromCodePoint"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-includes",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.includes"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-pad-end",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.padEnd"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-pad-start",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.padStart"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-raw",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.raw"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-repeat",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.repeat"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-starts-with",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.startsWith"
     },
     {
       "name": "core-js-3-only-polyfill/es-string-trim",
-      "signals": "WeakMap"
+      "signals": "WeakMap, String.prototype.trim"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-float32-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Float32Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Float32Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-float64-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Float64Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Float64Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-int16-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Int16Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Int16Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-int32-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Int32Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Int32Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-int8-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint16-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Uint16Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Uint16Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint32-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Uint32Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Uint32Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint8-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Uint8Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Uint8Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint8-clamped-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-3-only-polyfill/es-weak-map",

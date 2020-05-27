@@ -1,5 +1,5 @@
 {
-  "totalSignals": 320,
+  "totalSignals": 329,
   "variantsMissingSignals": [
     "core-js-2-preset-env-esmodules/true",
     "core-js-3-preset-env-esmodules/true"
@@ -611,39 +611,39 @@
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-float32-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Float32Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Float32Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-float64-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Float64Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Float64Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-int16-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Int16Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Int16Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-int32-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Int32Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Int32Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-int8-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint16-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Uint16Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Uint16Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint32-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Uint32Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Uint32Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint8-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Uint8Array"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor, Uint8Array"
     },
     {
       "name": "core-js-3-only-polyfill/es-typed-array-uint8-clamped-array",
-      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap"
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Object.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-3-only-polyfill/es-weak-map",

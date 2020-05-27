@@ -25,6 +25,7 @@ const hash = crypto
   .update(fs.readFileSync(`${__dirname}/yarn.lock`, 'utf8'))
   .update(fs.readFileSync(`${__dirname}/run.js`, 'utf8'))
   .update(fs.readFileSync(`${__dirname}/main.js`, 'utf8'))
+  .update(fs.readFileSync(require.resolve('../../audits/legacy-javascript.js'), 'utf8'))
   .digest('hex');
 const VARIANT_DIR = `${__dirname}/variants/${hash}`;
 
@@ -278,15 +279,15 @@ async function main() {
   // Summary of using source maps and pattern matching.
   summary = makeSummary('legacy-javascript.json');
   fs.writeFileSync(`${__dirname}/summary-signals.json`, JSON.stringify(summary, null, 2));
+
+  // Summary of using only pattern matching.
+  summary = makeSummary('legacy-javascript-nomaps.json');
+  fs.writeFileSync(`${__dirname}/summary-signals-nomaps.json`, JSON.stringify(summary, null, 2));
   console.log({
     totalSignals: summary.totalSignals,
     variantsMissingSignals: summary.variantsMissingSignals,
   });
   console.table(summary.variants);
-
-  // Summary of using only pattern matching.
-  summary = makeSummary('legacy-javascript-nomaps.json');
-  fs.writeFileSync(`${__dirname}/summary-signals-nomaps.json`, JSON.stringify(summary, null, 2));
 
   createSummarySizes();
 }
