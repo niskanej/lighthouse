@@ -83,7 +83,7 @@ class LongTasks extends Audit {
     }
 
     return {
-      score: Number(results.length === 0),
+      score: results.length === 0 ? 1 : 0,
       notApplicable: results.length === 0,
       details: tableDetails,
       displayValue,
