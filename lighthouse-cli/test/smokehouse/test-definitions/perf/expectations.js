@@ -169,29 +169,27 @@ module.exports = [
                 node: {
                   type: 'node',
                   nodeLabel: 'img',
-                  path: '0,HTML,1,BODY,0,DIV,0,IMG',
+                  selector: 'body > div#late-content > img',
                 },
               },
             ],
           },
         },
-        // TODO: uncomment when Chrome m83 lands
-        // 'layout-shift-elements': {
-        //   score: null,
-        //   displayValue: '2 elements found',
-        //   details: {
-        //     items: {
-        //       length: 2,
-        //     },
-        //   },
-        // },
+        'layout-shift-elements': {
+          score: null,
+          displayValue: '2 elements found',
+          details: {
+            items: {
+              length: 2,
+            },
+          },
+        },
         'long-tasks': {
           score: null,
           details: {
             items: {
               0: {
                 url: 'http://localhost:10200/perf/delayed-element.js',
-                group: 'Other',
                 duration: '>500',
               },
             },

@@ -63,11 +63,9 @@ class LongTasks extends Audit {
       .sort((a, b) => b.duration - a.duration)
       .slice(0, 20);
 
+    // TODO(beytoven): Add start time that matches with the simulated throttling
     const results = longtasks.map(task => ({
       url: BootupTime.getAttributableURLForTask(task, jsURLs),
-      group: task.group.label,
-      start: task.startTime,
-      self: task.selfTime,
       duration: task.duration * multiplier,
     }));
 

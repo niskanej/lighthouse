@@ -1821,30 +1821,18 @@
         "items": [
           {
             "url": "http://localhost:10200/dobetterweb/dbw_tester.js",
-            "group": "Other",
-            "start": 2854.095,
-            "self": 0.47,
             "duration": 983.081
           },
           {
             "url": "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js",
-            "group": "Other",
-            "start": 4808.602,
-            "self": 0.085,
             "duration": 127.282
           },
           {
             "url": "Unattributable",
-            "group": "Other",
-            "start": 3839.839,
-            "self": 0.075,
             "duration": 123.752
           },
           {
             "url": "http://localhost:10200/zone.js",
-            "group": "Other",
-            "start": 3996.134,
-            "self": 0.471,
             "duration": 96.198
           }
         ]
