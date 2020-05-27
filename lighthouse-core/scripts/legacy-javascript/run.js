@@ -270,6 +270,16 @@ async function main() {
         code: makeRequireCodeForPolyfill(module),
       });
     }
+
+    const allPolyfillCode = polyfills.map(polyfill => {
+      const module = coreJsVersion === 2 ? polyfill.coreJs2Module : polyfill.coreJs3Module;
+      return makeRequireCodeForPolyfill(module);
+    }).join('\n');
+    await createVariant({
+      group: 'all-legacy-polyfills',
+      name: `all-legacy-polyfills-core-js-${coreJsVersion}`,
+      code: allPolyfillCode,
+    });
   }
 
   removeCoreJs();
@@ -287,7 +297,11 @@ async function main() {
     totalSignals: summary.totalSignals,
     variantsMissingSignals: summary.variantsMissingSignals,
   });
-  console.table(summary.variants);
+  console.table(summary.variants.filter(variant => {
+    // Too many signals, break layout.
+    if (variant.name.includes('all-legacy-polyfills')) return false;
+    return true;
+  }));
 
   createSummarySizes();
 }

@@ -1,3 +1,7 @@
+all-legacy-polyfills
+  175764       all-legacy-polyfills-core-js-3/main.bundle.min.js
+  125257       all-legacy-polyfills-core-js-2/main.bundle.min.js
+
 core-js-2-only-polyfill
   47832        es6-typed-uint8-clamped-array/main.bundle.min.js
   47812        es6-typed-float64-array/main.bundle.min.js

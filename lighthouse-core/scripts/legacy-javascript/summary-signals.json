@@ -1,10 +1,18 @@
 {
-  "totalSignals": 329,
+  "totalSignals": 489,
   "variantsMissingSignals": [
     "core-js-2-preset-env-esmodules/true",
     "core-js-3-preset-env-esmodules/true"
   ],
   "variants": [
+    {
+      "name": "all-legacy-polyfills/all-legacy-polyfills-core-js-2",
+      "signals": "Promise, Uint8Array, Object.getOwnPropertyDescriptor, ArrayBuffer, DataView, Array.prototype.fill, Array.prototype.findIndex, Array.prototype.find, Array.prototype.forEach, Array.from, Array.isArray, Array.prototype.lastIndexOf, Array.of, Date.now, Date.prototype.toISOString, Date.prototype.toJSON, Map, Number.isInteger, Number.isSafeInteger, Number.parseFloat, Number.parseInt, Object.assign, Object.create, Object.defineProperties, Object.defineProperty, Object.setPrototypeOf, Reflect.apply, Reflect.construct, Reflect.deleteProperty, Reflect.getOwnPropertyDescriptor, Reflect.getPrototypeOf, Reflect.get, Reflect.has, Reflect.isExtensible, Reflect.ownKeys, Reflect.preventExtensions, Reflect.setPrototypeOf, Reflect.set, Set, String.prototype.codePointAt, String.prototype.endsWith, String.fromCodePoint, String.prototype.includes, String.raw, String.prototype.repeat, String.prototype.startsWith, Float32Array, Float64Array, Int16Array, Int32Array, Int8Array, Uint16Array, Uint32Array, Uint8ClampedArray, WeakMap, WeakSet, Array.prototype.includes, Object.entries, Object.getOwnPropertyDescriptors, Object.values, String.prototype.padEnd, String.prototype.padStart, Array.prototype.filter, Array.prototype.map, Array.prototype.reduce, Array.prototype.reduceRight, Array.prototype.some, Date.prototype.toString, Function.prototype.name, Object.freeze, Object.getOwnPropertyNames, Object.getPrototypeOf, Object.isExtensible, Object.isFrozen, Object.isSealed, Object.keys, Object.preventExtensions, Object.seal, Reflect.defineProperty, String.prototype.trim"
+    },
+    {
+      "name": "all-legacy-polyfills/all-legacy-polyfills-core-js-3",
+      "signals": "Int8Array, Uint8ClampedArray, ArrayBuffer, DataView, WeakMap, Promise, Object.getOwnPropertyDescriptor, Array.prototype.fill, Array.prototype.filter, Array.prototype.findIndex, Array.prototype.find, Array.prototype.forEach, Array.from, Array.prototype.includes, Array.isArray, Array.prototype.lastIndexOf, Array.prototype.map, Array.of, Array.prototype.reduceRight, Array.prototype.reduce, Array.prototype.some, Date.now, Date.prototype.toISOString, Date.prototype.toJSON, Map, Number.isInteger, Number.isSafeInteger, Number.parseFloat, Number.parseInt, Object.assign, Object.create, Object.defineProperties, Object.defineProperty, Object.entries, Object.freeze, Object.getOwnPropertyDescriptors, Object.getOwnPropertyNames, Object.getPrototypeOf, Object.isExtensible, Object.isFrozen, Object.isSealed, Object.keys, Object.preventExtensions, Object.seal, Object.setPrototypeOf, Object.values, Reflect.apply, Reflect.construct, Reflect.defineProperty, Reflect.deleteProperty, Reflect.getOwnPropertyDescriptor, Reflect.getPrototypeOf, Reflect.get, Reflect.has, Reflect.isExtensible, Reflect.ownKeys, Reflect.preventExtensions, Reflect.setPrototypeOf, Reflect.set, Set, String.prototype.codePointAt, String.prototype.endsWith, String.fromCodePoint, String.prototype.includes, String.prototype.padEnd, String.prototype.padStart, String.raw, String.prototype.repeat, String.prototype.startsWith, String.prototype.trim, Float32Array, Float64Array, Int16Array, Int32Array, Uint16Array, Uint32Array, Uint8Array, WeakSet, Date.prototype.toString, Function.prototype.name"
+    },
     {
       "name": "core-js-2-only-polyfill/es6-array-fill",
       "signals": "Array.prototype.fill"
