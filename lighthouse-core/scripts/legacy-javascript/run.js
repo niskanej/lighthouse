@@ -34,7 +34,7 @@ const STAGE = process.env.STAGE || 'all';
 const mainCode = fs.readFileSync(`${__dirname}/main.js`, 'utf-8');
 
 const plugins = LegacyJavascript.getTransformPatterns().map(pattern => pattern.name);
-const polyfills = LegacyJavascript.getPolyfillData().map(d => d.module);
+const polyfills = LegacyJavascript.getPolyfillData();
 
 /**
  * @param {string} command
@@ -95,6 +95,7 @@ async function createVariant(options) {
       `${dir}/main.transpiled.js`,
       '-o', `${dir}/main.bundle.js`,
       '--debug', // source maps
+      '--full-paths=false',
     ]);
 
     // Minify.
@@ -217,6 +218,13 @@ function createSummarySizes() {
   fs.writeFileSync(`${__dirname}/summary-sizes.txt`, lines.join('\n'));
 }
 
+/**
+ * @param {string} module
+ */
+function makeRequireCodeForPolyfill(module) {
+  return `require("../../../../node_modules/core-js/modules/${module}")`;
+}
+
 async function main() {
   for (const plugin of plugins) {
     await createVariant({
@@ -254,10 +262,11 @@ async function main() {
     }
 
     for (const polyfill of polyfills) {
+      const module = coreJsVersion === 2 ? polyfill.coreJs2Module : polyfill.coreJs3Module;
       await createVariant({
         group: `core-js-${coreJsVersion}-only-polyfill`,
-        name: polyfill,
-        code: `require("core-js/modules/${polyfill}")`,
+        name: module,
+        code: makeRequireCodeForPolyfill(module),
       });
     }
   }
